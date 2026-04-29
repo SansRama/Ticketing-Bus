@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juragan99Trans - Pesan Tiketmu Sekarang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Juragan 99</div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#beranda" class="nav-link">Beranda</a>
+                    <a href="#fasilitas" class="nav-link">Fasilitas</a>
+                    <a href="#armada" class="nav-link">Armada</a>
+                    <a href="#agen" class="nav-link">Agen</a>
+                    <a href="#promosi" class="nav-link">Promosi</a>
+                    <a href="#tentang" class="nav-link">Tentang Kami</a>
+                    <a href="#member" class="nav-link">Member</a>
+                </div>
+                <button class="btn-login">Login</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">PESAN TIKETMU SEKARANG</h1>
+                <div class="hero-routes">
+                    <span class="route-badge">Malang / Surabaya ↔ Jakarta</span>
+                    <span class="route-badge">Malang ↔ Denpasar</span>
+                    <span class="route-badge">Malang ↔ Bogor</span>
+                    <span class="route-badge">Malang ↔ Yogyakarta</span>
+                    <span class="route-badge">Surabaya ↔ Denpasar</span>
+                    <span class="route-badge">Malang ↔ Bandung</span>
+                </div>
+                <button class="btn-cta">Cari Tiket Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Pencarian Tiket -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-card">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="beli">Beli Tiket</button>
+                    <button class="tab-btn" data-tab="cek">Cek Tiket</button>
+                    <button class="tab-btn" data-tab="pariwisata">Pariwisata</button>
+                    <button class="tab-btn" data-tab="paket">Cek Paket</button>
+                </div>
+                <div class="tab-content active" id="beli">
+                    <form class="search-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Dari</label>
+                                <select class="form-control">
+                                    <option value="">Pilih Kota Asal</option>
+                                    <option value="malang">Malang</option>
+                                    <option value="surabaya">Surabaya</option>
+                                    <option value="jakarta">Jakarta</option>
+                                    <option value="bandung">Bandung</option>
+                                    <option value="yogyakarta">Yogyakarta</option>
+                                    <option value="denpasar">Denpasar</option>
+                                    <option value="bogor">Bogor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Ke</label>
+                                <select class="form-control">
+                                    <option value="">Pilih Kota Tujuan</option>
+                                    <option value="malang">Malang</option>
+                                    <option value="surabaya">Surabaya</option>
+                                    <option value="jakarta">Jakarta</option>
+                                    <option value="bandung">Bandung</option>
+                                    <option value="yogyakarta">Yogyakarta</option>
+                                    <option value="denpasar">Denpasar</option>
+                                    <option value="bogor">Bogor</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Jenis Perjalanan</label>
+                                <div class="toggle-group">
+                                    <button type="button" class="toggle-btn active" data-trip="pergi">Pergi</button>
+                                    <button type="button" class="toggle-btn" data-trip="pp">Pulang-Pergi</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Berangkat</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Jumlah Penumpang</label>
+                                <select class="form-control">
+                                    <option value="1">1 Dewasa</option>
+                                    <option value="2">2 Dewasa</option>
+                                    <option value="3">3 Dewasa</option>
+                                    <option value="4">4 Dewasa</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Kelas</label>
+                                <select class="form-control">
+                                    <option value="all">Semua Kelas</option>
+                                    <option value="business">Business</option>
+                                    <option value="executive">Executive</option>
+                                    <option value="first">First Class</option>
+                                    <option value="sleeper">Sleeper</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-search">Cari Tiket</button>
+                    </form>
+                </div>
+                <div class="tab-content" id="cek">
+                    <div class="tab-placeholder">
+                        <p>Masukkan kode booking Anda untuk mengecek tiket</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="pariwisata">
+                    <div class="tab-placeholder">
+                        <p>Layanan pariwisata dan sewa bus tersedia</p>
+                    </div>
+                </div>
+                <div class="tab-content" id="paket">
+                    <div class="tab-placeholder">
+                        <p>Cek status pengiriman paket Anda</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan -->
+    <section class="features" id="fasilitas">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Kami?</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🚌</div>
+                    <h3>Armada Handal</h3>
+                    <p>Armada terbaru dengan fitur kenyamanan modern untuk perjalanan Anda</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💰</div>
+                    <h3>Harga Terbaik</h3>
+                    <p>Harga terjangkau dengan layanan bintang lima untuk semua penumpang</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3>Reservasi Online</h3>
+                    <p>Beli tiket kapan saja, di mana saja melalui website atau aplikasi mobile</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Kepuasan Penumpang</h3>
+                    <p>Kepuasan dan keselamatan penumpang adalah prioritas utama kami</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rute Populer -->
+    <section class="routes">
+        <div class="container">
+            <h2 class="section-title">Rute Populer</h2>
+            <div class="routes-grid">
+                <div class="route-card fade-in">
+                    <div class="route-icon">🚌</div>
+                    <h3>Malang → Jakarta</h3>
+                    <span class="route-pp-badge">PP tersedia</span>
+                    <button class="btn-route">Pesan</button>
+                </div>
+                <div class="route-card fade-in">
+                    <div class="route-icon">🚌</div>
+                    <h3>Malang → Denpasar</h3>
+                    <span class="route-pp-badge">PP tersedia</span>
+                    <button class="btn-route">Pesan</button>
+                </div>
+                <div class="route-card fade-in">
+                    <div class="route-icon">🚌</div>
+                    <h3>Malang → Bandung</h3>
+                    <span class="route-pp-badge">PP tersedia</span>
+                    <button class="btn-route">Pesan</button>
+                </div>
+                <div class="route-card fade-in">
+                    <div class="route-icon">🚌</div>
+                    <h3>Surabaya → Jakarta</h3>
+                    <span class="route-pp-badge">PP tersedia</span>
+                    <button class="btn-route">Pesan</button>
+                </div>
+                <div class="route-card fade-in">
+                    <div class="route-icon">🚌</div>
+                    <h3>Malang → Yogyakarta</h3>
+                    <span class="route-pp-badge">PP tersedia</span>
+                    <button class="btn-route">Pesan</button>
+                </div>
+                <div class="route-card fade-in">
+                    <div class="route-icon">🚌</div>
+                    <h3>Malang → Bogor</h3>
+                    <span class="route-pp-badge">PP tersedia</span>
+                    <button class="btn-route">Pesan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kelas Armada -->
+    <section class="fleet" id="armada">
+        <div class="container">
+            <h2 class="section-title">Kelas Armada Kami</h2>
+            <div class="fleet-grid">
+                <div class="fleet-card fade-in">
+                    <img src="https://placehold.co/400x250/D32F2F/FFFFFF?text=Business+Class" alt="Business Class">
+                    <div class="fleet-content">
+                        <h3>Business Class</h3>
+                        <ul class="fleet-features">
+                            <li>✓ AC Full Blast</li>
+                            <li>✓ WiFi Gratis</li>
+                            <li>✓ Reclining Seat</li>
+                            <li>✓ USB Charging Port</li>
+                            <li>✓ Snack & Mineral Water</li>
+                        </ul>
+                        <button class="btn-fleet">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="fleet-card fade-in">
+                    <img src="https://placehold.co/400x250/B71C1C/FFFFFF?text=Executive+Class" alt="Executive Class">
+                    <div class="fleet-content">
+                        <h3>Executive Class</h3>
+                        <ul class="fleet-features">
+                            <li>✓ AC Full Blast</li>
+                            <li>✓ WiFi Gratis</li>
+                            <li>✓ Extra Legroom</li>
+                            <li>✓ Entertainment System</li>
+                            <li>✓ Premium Snack Box</li>
+                        </ul>
+                        <button class="btn-fleet">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="fleet-card fade-in">
+                    <img src="https://placehold.co/400x250/C62828/FFFFFF?text=Sleeper+Class" alt="Sleeper Class">
+                    <div class="fleet-content">
+                        <h3>Sleeper Class</h3>
+                        <ul class="fleet-features">
+                            <li>✓ Tempat Tidur Nyaman</li>
+                            <li>✓ AC Full Blast</li>
+                            <li>✓ WiFi Gratis</li>
+                            <li>✓ Privacy Curtain</li>
+                            <li>✓ Selimut & Bantal</li>
+                        </ul>
+                        <button class="btn-fleet">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download App -->
+    <section class="download-app">
+        <div class="container">
+            <div class="download-content">
+                <h2>Perjalanan Lebih Mudah dengan Aplikasi Juragan99</h2>
+                <p>Download sekarang dan nikmati kemudahan pesan tiket di genggaman Anda</p>
+                <div class="download-buttons">
+                    <button class="btn-download">
+                        <span class="download-icon">▶</span>
+                        <div>
+                            <small>GET IT ON</small>
+                            <strong>Google Play</strong>
+                        </div>
+                    </button>
+                    <button class="btn-download">
+                        <span class="download-icon">🍎</span>
+                        <div>
+                            <small>Download on the</small>
+                            <strong>App Store</strong>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">Juragan 99</h3>
+                    <p>Perusahaan transportasi bus terpercaya dengan layanan terbaik untuk perjalanan Anda ke seluruh Indonesia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#fasilitas">Fasilitas</a></li>
+                        <li><a href="#armada">Kelas Armada</a></li>
+                        <li><a href="#agen">Agen</a></li>
+                        <li><a href="#promosi">Promosi</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak</h4>
+                    <ul class="footer-contact">
+                        <li>📞 0811-3335-7799</li>
+                        <li>✉️ admin@juragan99trans.id</li>
+                        <li>📍 Jl. Komud Abdurrahman Saleh, Kel. Asrikaton, Kec. Pakis, Kab. Malang, Jawa Timur</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Metode Pembayaran</h4>
+                    <div class="payment-methods">
+                        <div class="payment-item">💳 Virtual Account</div>
+                        <div class="payment-item">📱 E-Wallet</div>
+                        <div class="payment-item">🏪 Minimarket</div>
+                        <div class="payment-item">🏦 Transfer Bank</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Juragan99Trans. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
