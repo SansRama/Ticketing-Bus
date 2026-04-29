@@ -1,0 +1,175 @@
+git init (untuk mengawali)
+
+git add (nama file) (menambah file ke staging index)
+
+git status (mengecek status)
+
+git commit -m (nama file) (menambahkan file ke repository)
+
+git diff (nama file) (untuk memperlihatkan apa saja yang diubah)
+
+git add . (menambahkan semuanya ke staging)
+
+git clean -f (menghapus semua file di working directory)
+
+git reset --soft 0b0e0d2 (perubahannya masih ada di staging index)
+
+git reset --mixed 0b0e0d2 (perubahannya masih ada di working directory)
+
+git reset --hard 0b0e0d2 (perubahannya hilang semua)
+
+git commit --amend -m "teks" (ini mereplace tanpa commit ulang jadinya ke replace dan hashnya keganti)
+
+git checkout 7c95c96  -- file1.txt(ingin melihat ke versi sebelumnya)
+
+git restore --staged file1.txt(mengembalikan file yang asli dari menu staged area)
+
+git restore "nama file" (membatalkan perubahan file working directory)
+
+git revert hash (lebih aman digunakan timbang menggunakan reset karena hanya memperbaiki file yang ingin diperbaiki saja dan bisa dikembalikan lagi dan langsung dibuatkan commit baru)
+
+.gitignore (itu file yang tidak terlalu penting yang tidak mau dimasukkan ke repository)
+
+git checkout b0998e9 atau untuk langsung Kembali ke HEAD git checkout master (untuk Kembali ke tiap snapshoot)
+
+git blame (nama file) (fungsinya untuk melihat siapa yang mengganti dan apa saja yang diubah)
+
+git show hash(menampilkan apa yang diubah)
+
+git log --oneline (untuk meunculkan log file)
+
+git log --oneline --graph (untuk memunculkan log git yang sudah kompleks berupa paragraph kalo sudah branching)
+
+git diff (hash yang mau dibandingkan) dengan (hash yang mau dibandingkan dia akhir)
+
+git difftool hash 1 dan hash 2 (unutk compare yang khusus untuk vsc yang sudah di setting)
+
+git branch (untuk mengecek lagi punya berapa branch )
+
+git branch --show-current (untuk mengecek lagi di branch mana)
+
+git branch *nama branch* (untuk membuat branch baru)
+
+git switch/checkout *nama branch* (untuk pindah branch)
+
+git branch -m *nama branch* (mengubah nama branchnya langsung)
+
+git branch -d *nama branch* (menghapus branch)
+
+git merge *nama file* (untuk menggabungkan file )
+
+git merge --abort (untuk membatalkan merge)
+
+git cherry-pick commitID (untuk mengmerge salah satu file saja tidak mengmerge semuanya catatan: harus ada di branch master)
+
+git tag *namanya* hash (untuk membuat tag)
+
+git tag -l/--list (untuk melihat semua tag yang sudah ditambahkan)
+
+git tag -d nametag/ git tag --delete nametag (menghapus nametag)
+
+git stash push -m *nama perubahan* (untuk menyimpan perubahan sementara jika tidak ingin digabungkan)
+
+git stash list (untuk melihat semua stash)
+
+git stash show stashID (untuk melihat perubahan yang ada di stash)
+
+git stash apply stashID (untuk mengambil perubahan di stash)
+
+git stash drop stashID (untuk menghapus stash)
+
+git stash clear (untuk menghapus semua stash)
+
+git rebase master (menggabungkan branch ke master dan cara menggunakannya harus dari branch itu baru di rebase ke master(jadi tag akan hilanga kalo menggunakan rebase))
+
+git merge --squash namabranch(untuk meganggabungkan commit dari 10 menjadi 1) 
+
+Git Branching Strategy
+1.Gitflow workflow
+2.Trunk Based Development Workflow
+3.Forking Workflow
+
+SSH
+
+ssh-keygen (untuk membuat ssh key)
+id_rsa (private key)  /c/Users/acer/.ssh/id_ed25519
+
+id_rsa.pub (public key) /c/Users/acer/.ssh/id_ed25519.pub
+
+ls -l (melihat id ssh)
+
+cat idpublic(untuk melihat ssh)
+
+ssh -T git@guthub.com (untuk melihat sudah terhubung belum)
+
+git remote add nama ssh-url (perintah unutk menambah remote repository)
+
+git remote (untuk melihat remote repository)
+
+git remote get-url nama*origin* (untuk melihat url di git)
+
+git remote rm nama (untuk menghapus remote repository)
+
+git push namaremote*origin* localbranch*master* (untuk push branch) 
+
+git push namaremote localbranch:remotebranch (untuk mengubah nama remote di GitHub)
+
+git push origin --all (untuk push semua branch)
+
+git push -u origin main/master
+
+git push --delete namaremote namabranch (untuk mengapus branch dari gitbash)
+
+git clone urlremoterepository(untuk clone repository)
+
+git clone urlremoterepository namafolder (untuk merubah Namanya jika di clone)
+
+git branch -r (untuk melihat branch yang di remote)
+
+git branch -a (untuk melihat semua branch yang di a maupun di remote)
+
+git checkout -b localbranch*dilokalnya mau sebagainama apa* nameremote*origin*/remotebranch*feature/a* (membuat branch dari remote branch)
+
+git fetch namaremote (untuk melihat semua perubahan terakhir)
+
+git fetch namaremote remotebranch (untuk melihat perubahan branch tertentu)
+
+git diff feature/a..origin/feature/a (untuk membandingkan branch)
+
+git pull namaremote remotebranch (untuk mengambil isi yang di branch itu dan mengupdate local repositorynya)
+
+git push namaremote nametag(untuk mengirim tag ke remote repository)
+
+git push namaremote --tags(untuk mengirim semua tag ke remote repository)
+
+git fetch namaremote nametag (untuk mengambil tag)
+
+git fetch namaremote(untuk mengambil semua tag)
+
+git push --delete namaremote nametag(untuk menghapus tag di repository)
+
+git submodule add urlgitrepo namafolder(untuk menambah submodule)
+
+git submodule update update--remote namafolder (jika terjadi perubahan di repository submodule)
+
+git submodule update --remote(untuk mengupdate semua submodule)
+
+git submodule set-branch --branch namabranch namafolder(untuk menyamkan submodule)
+
+git remote get-url origin (melihat mengambil darimana)
+
+catatan: 1. jika ingin melihat isi file tanpa ingin di merge di local menggunakan fetch dulu jika sudah yakin baru menggunakan pull
+		 2. Pull request itu bisa membantu kita merge otomatis dari server langsung dan bisa langsung mereviewnya anpa kesusahan harus lihat di local
+
+Cara ngepush Repository :
+1. git init
+2. git add . / git add (nama file)
+3. git commit -m (Pesan Text)
+4. git branch -M main (menentukan branch)
+5. git remote add origin url(SSH)
+6. git pull origin --rebase(untuk menyamakan commit)
+7. git push -u origin main/master
+
+
+
+
